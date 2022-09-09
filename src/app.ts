@@ -28,28 +28,27 @@ const startApp = async () => {
     if (tBodyElement) tBodyElement.innerHTML = li;
 
     const pageLabelElement = document.querySelector('[data-pageview=""]');
-    if (pageLabelElement)
-      pageLabelElement.textContent = `Showing Page ${page}`;
-    
+    if (pageLabelElement) pageLabelElement.textContent = `Showing Page ${page}`;
+
     if (page === 1) prevBtn?.setAttribute("disabled", "true");
     else prevBtn?.removeAttribute("disabled");
   };
 
   nextBtn?.addEventListener("click", async () => {
-    const page = currentPage + 1
+    const page = currentPage + 1;
+    currentPage = page;
     const data = await fetchPage(page);
     if (data && data[page]) {
-      currentPage = page;
       setData(data[page], page);
     }
   });
 
   prevBtn?.addEventListener("click", async () => {
-    const page = currentPage - 1
-    if (page < 1) return
+    const page = currentPage - 1;
+    currentPage = page;
+    if (page < 1) return;
     const data = await fetchPage(page);
     if (data && data[page]) {
-      currentPage = page;
       setData(data[page], page);
     }
   });
