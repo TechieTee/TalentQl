@@ -38,7 +38,7 @@ const startApp = async () => {
     const page = currentPage + 1;
     currentPage = page;
     const data = await fetchPage(page);
-    if (data && data[page]) {
+    if (data && data[page] && page === currentPage) {
       setData(data[page], page);
     }
   });
@@ -48,7 +48,7 @@ const startApp = async () => {
     currentPage = page;
     if (page < 1) return;
     const data = await fetchPage(page);
-    if (data && data[page]) {
+    if (data && data[page] && page === currentPage) {
       setData(data[page], page);
     }
   });
