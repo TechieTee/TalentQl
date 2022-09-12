@@ -54,6 +54,7 @@ const startApp = async () => {
   });
 
   const data = await fetchPage(1);
+  
   setData(data["1"], 1);
 };
 
