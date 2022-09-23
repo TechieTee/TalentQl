@@ -1,7 +1,8 @@
 # Frontend Assessment
-[Deployed App](https://talentql-fe.netlify.app)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ff7f4964d0294573ae4a4ed509c8b824)](https://www.codacy.com/gh/TechieTee/TalentQl/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TechieTee/TalentQl&amp;utm_campaign=Badge_Grade)
+
+[Deployed App](https://talentql-fe.netlify.app)
 
 Build and deploy a very simple frontend app for paginated data, that does the following
 
